@@ -6,6 +6,8 @@ import {  createBrowserRouter, RouterProvider, createRoutesFromElements, Route }
 import Home from './assets/componets/home/home.jsx'
 import About from './assets/componets/about/about.jsx'
 import Contact from './assets/componets/contact/contact.jsx'
+import User from './assets/componets/User/user.jsx'
+import Github from './assets/componets/Github/github.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -26,9 +28,11 @@ import Contact from './assets/componets/contact/contact.jsx'
 const router = createBrowserRouter (
 createRoutesFromElements(
   <Route path='/' element={<App/>}>
-  <Route path='' element={<Home />}/>
-  <Route path='about' element={<About />}/>
-  <Route path='contact' element={<Contact />}/>
+  <Route path='' element={<Home/>}/>
+  <Route path='about' element={<About/>}/>
+  <Route path='contact' element={<Contact/>}/>
+  <Route path='user/:id' element={<User/>}/>
+  <Route path='github'  element={<Github />}/>
   </Route>
 )
 )
