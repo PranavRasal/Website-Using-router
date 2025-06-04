@@ -8,6 +8,7 @@ import About from './assets/componets/about/about.jsx'
 import Contact from './assets/componets/contact/contact.jsx'
 import User from './assets/componets/User/user.jsx'
 import Github from './assets/componets/Github/github.jsx'
+import { Apl } from './assets/componets/AplForGitHub/apl.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -32,7 +33,10 @@ createRoutesFromElements(
   <Route path='about' element={<About/>}/>
   <Route path='contact' element={<Contact/>}/>
   <Route path='user/:id' element={<User/>}/>
-  <Route path='github'  element={<Github />}/>
+  <Route 
+  loader={Apl}
+  path='github' 
+   element={<Github />}/>
   </Route>
 )
 )
